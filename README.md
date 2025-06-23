@@ -1,24 +1,22 @@
 # E-commerce-schema
 # E-Commerce Database Schema Project
-
-## 📌 Description
+ Description
 
 This project is part of the SQL Developer Internship. It involves designing and implementing a relational database schema for an E-Commerce store using PostgreSQL in pgAdmin.
 
 ---
 
-## 🧾 Entities/Tables Created
+ Entities/Tables Created
 
-1. **Customers** – Stores customer information.
-2. **Categories** – Stores product categories.
-3. **Products** – Stores product details linked to categories.
-4. **Orders** – Stores orders placed by customers.
-5. **OrderDetails** – Stores products in each order (many-to-many).
-6. **Payments** – Stores payment information for orders.
+1. Customers – Stores customer information.
+2. Categories – Stores product categories.
+3. Products – Stores product details linked to categories.
+4. Orders – Stores orders placed by customers.
+5. OrderDetails– Stores products in each order (many-to-many).
+6. Payments – Stores payment information for orders.
 
 ---
-
-## 🔗 Relationships
+Relationships
 
 - Each `Customer` can place multiple `Orders`.
 - Each `Order` can include multiple `Products` through `OrderDetails`.
@@ -27,7 +25,7 @@ This project is part of the SQL Developer Internship. It involves designing and 
 
 ---
 
-## 🛠 Tools Used
+Tools Used
 
 - PostgreSQL
 - pgAdmin 4
@@ -35,7 +33,7 @@ This project is part of the SQL Developer Internship. It involves designing and 
 
 ---
 
-## 📁 Files Included
+ Files Included
 
 - `schema.sql` – SQL script to create the full database schema.
 - `ERD(E-commerce).pdf` – ER diagram of the schema.
@@ -43,16 +41,16 @@ This project is part of the SQL Developer Internship. It involves designing and 
 
 ---
 
-## ✅ How to Run
+How to Run
 
-1. Open **pgAdmin**.
+1. Open pgAdmin.
 2. Create a database named `ecommerce_store`.
-3. Open **Query Tool**, paste the SQL from `schema.sql`, and execute.
-4. Explore tables under **Schemas > public > Tables**.
+3. Open Query Tool, paste the SQL from `schema.sql`, and execute.
+4. Explore tables under Schemas > public > Tables.
 
 ---
 
-## 📌 Task Outcome
+ Task Outcome
 
 - Successfully implemented a normalized database schema.
 - Defined primary and foreign key constraints.
