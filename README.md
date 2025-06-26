@@ -119,3 +119,100 @@ WHERE customer_id = 105;
 Delete Records
 DELETE FROM customers
 WHERE customer_id = 106;
+
+Task 3: Writing Basic SELECT Queries
+
+Objective:
+Extract data from the customers table using basic SQL commands such as SELECT, WHERE, ORDER BY, LIMIT, and column operations like ADD and DROP.
+
+Tools Used:
+
+DB Browser for SQLite or MySQL Workbench
+
+Table Used:
+Table Name: customers
+
+Column Name	Data Type
+customer_id	INTEGER (Primary Key)
+customer_name	TEXT
+email	TEXT
+phone	INTEGER
+address	TEXT
+age	INTEGER
+city	VARCHAR(20) (optional)
+
+SQL Operations Performed:
+
+Add Column
+
+sql
+Copy
+Edit
+ALTER TABLE customers ADD COLUMN city VARCHAR(20);
+ALTER TABLE customers ADD COLUMN age INTEGER;
+Drop Column
+
+sql
+Copy
+Edit
+ALTER TABLE customers DROP COLUMN city; -- Works in MySQL, not supported in older SQLite versions
+Update Data
+
+sql
+Copy
+Edit
+UPDATE customers SET age = 54 WHERE customer_id = 102;
+UPDATE customers SET age = 34 WHERE customer_id = 103;
+UPDATE customers SET age = 22 WHERE customer_id = 104;
+UPDATE customers SET age = 39 WHERE customer_id = 105;
+UPDATE customers SET age = 27 WHERE customer_id = 107;
+Data Retrieval Queries:
+
+View all customer data
+
+sql
+Copy
+Edit
+SELECT * FROM customers;
+Customers with age greater than 45
+
+sql
+Copy
+Edit
+SELECT * FROM customers WHERE age > 45;
+Order by customer name in ascending order
+
+sql
+Copy
+Edit
+SELECT * FROM customers ORDER BY customer_name;
+Customers with age between 20 and 30
+
+sql
+Copy
+Edit
+SELECT * FROM customers WHERE age BETWEEN 20 AND 30;
+Customers from Nashik or Pune
+
+sql
+Copy
+Edit
+SELECT * FROM customers WHERE address = 'nashik' OR address = 'Pune';
+Customers whose name starts with 'sakshi'
+
+sql
+Copy
+Edit
+SELECT * FROM customers WHERE customer_name LIKE 'sakshi%';
+Order by age in descending order
+
+sql
+Copy
+Edit
+SELECT * FROM customers ORDER BY age DESC;
+Top 5 oldest customers
+
+sql
+Copy
+Edit
+SELECT * FROM customers ORDER BY age DESC LIMIT 5;
